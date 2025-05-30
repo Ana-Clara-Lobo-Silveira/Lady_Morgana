@@ -36,3 +36,14 @@ while jogo_ligado:
     #Permanencia de atualizações
     pg.display.update()
     r.tick(60)
+
+
+    #sangue +1 ponto
+    #bolsa de sangue +3 pontos
+    #morcego +1 ponto
+    #poção do amor + 10 pontos
+    #poção da morte = morte instantanea
+    #alho -2pontos
+    #agua benta -20 pontos
+    #cruz -10 pontos
+    #estaca - 1ponto
