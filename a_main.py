@@ -8,7 +8,7 @@ tela = pg.display.set_mode((1200,800)) #Criando tela
 pg.display.set_caption("Lady Morgana") #Nome do jogo
 
 
-morgana = Morgana("imagem/morgana_.png",140,235,550,550)
+morgana = Morgana("imagem/morgana__.png",140,235,550,550)
 
 fundo = pg.image.load ("imagem/cenario_02.png") #Decidindo o cenário
 tela.blit (fundo,(0,0)) #Desenhando o cenário
