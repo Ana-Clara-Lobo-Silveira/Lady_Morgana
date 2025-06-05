@@ -90,3 +90,9 @@ while jogo_ligado:
     #Permanencia de atualizações
     pg.display.update()
     r.tick(60)
+
+
+#msc de fundo
+    #pygame.mixer.music.load("som/musica_fundo.mp3"
+    #pygame.mixer.music.set_endevent(pygame.USEREVENT)
+    #pygame.mixer.music.play()
