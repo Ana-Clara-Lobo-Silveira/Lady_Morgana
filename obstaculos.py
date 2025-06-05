@@ -12,18 +12,18 @@ class Obstaculo:
         self.mask = pg.mask.from_surface(self.imagem)
 
         self.p_yi  = 0
-        self.lista_pos = [200,300,400,500,600,700,800,900,1000]
+        self.lista_pos = [100,200,300,400,500,600,700,800,900,1000]
 
         self.p_y =  self.p_yi
         self.p_x = random.choice(self.lista_pos)
 
-        self.velo = (random.randint(1,2))
+        self.velo = (random.randint(1,6))
 
     def movimento(self):
         self.p_y += self.velo
-        if self.p_y == 800:
+        if self.p_y >= 700:
             self.p_y = self.p_yi
-            self.velo = (random.randint(1,2))
+            self.velo = (random.randint(1,6))
             self.p_x = random.choice(self.lista_pos)
         
     def desenho (self,tela):
