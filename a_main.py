@@ -11,27 +11,27 @@ tela = pg.display.set_mode((1200,800)) #Criando tela
 pg.display.set_caption("Lady Morgana") #Nome do jogo
 
 estado = "CAPA"
-morgana = Morgana("imagem/morgana__.png",120,208,550,550)
+morgana = Morgana("imagem/morgana__.png",120,208,550,550,"som/item.mp3.crdownload")
 fonte_placar = pg.font.SysFont("Matura MT Script Capitals",25,False,False)
 
 fundo_v = pg.image.load("imagem/vitoria.png")
 fundo_v = pg.transform.scale(fundo_v,(1200,820))
 fundo_i = pg.image.load("imagem/tutorial.png")
 fundo_i = pg.transform.scale(fundo_i,(1200,820))
-fundo_c = pg.image.load("imagem/capa.png")
+fundo_c = pg.image.load("imagem/capa_.png")
 fundo_c = pg.transform.scale(fundo_c,(1200,820))
 fundo_d = pg.image.load("imagem/derrota.png")
 fundo_d = pg.transform.scale(fundo_d,(1200,820))
 fundo = pg.image.load ("imagem/cenario_02.png") #Decidindo o cenário
 tela.blit (fundo,(0,0)) #Desenhando o cenário
 o = [Obstaculo("imagem/pocao_a.png",70,70,500), #Lista de obstáculos
-     Obstaculo("imagem/vinho.png",70,70,2),
-     Obstaculo("imagem/morcego.png",80,80,1),
-     Obstaculo("imagem/bolsa.png",70,70,6),
-     Obstaculo("imagem/sangue.png",70,70,3),
-     Obstaculo("imagem/grimorio.png",60,70,2),
+     Obstaculo("imagem/vinho.png",70,70,20),
+     Obstaculo("imagem/morcego.png",80,80,10),
+     Obstaculo("imagem/bolsa.png",70,70,60),
+     Obstaculo("imagem/sangue.png",70,70,10),
+     Obstaculo("imagem/grimorio.png",60,70,20),
      Obstaculo("imagem/pocao_m.png",70,70,-1000),
-     Obstaculo("imagem/alho.png",70,70,2),
+     Obstaculo("imagem/alho.png",70,70,-100),
      Obstaculo("imagem/agua.png",70,70,-50)]
      
 
@@ -70,6 +70,7 @@ while jogo_ligado:
             if morgana.masc.overlap(ob.mask,(ob.p_x - morgana.p_x,ob.p_y - morgana.p_y)):
                 pontuacao = pontuacao + ob.pontuacao
                 print(f"Morgana: {pontuacao}")
+                morgana.som.play()
                 ob.movimento()
                 ob.p_y = ob.p_yi 
                 ob.p_x = random.choice(ob.lista_pos)

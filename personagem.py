@@ -1,7 +1,7 @@
 import pygame as pg
 
-class Morgana:
-    def __init__(self,end_imagem, l, a, xi, yi): #Define o personagem com todos os parâmetros definidos de uma só vez.
+class Morgana: 
+    def __init__(self,end_imagem, l, a, xi, yi,end_som):
         self.imagem = pg.image.load (end_imagem)
         self.imagem = pg.transform.scale(self.imagem,(l,a))
         self.masc = pg.mask.from_surface(self.imagem)
@@ -12,6 +12,8 @@ class Morgana:
         self.la = l
         self.al = a
 
+        self.som = pg.mixer.Sound(end_som)
+        
     def moviment(self,t_d,t_e):
         t = pg.key.get_pressed()
         if t [t_d] and self.p_x <= 1200-self.la:
