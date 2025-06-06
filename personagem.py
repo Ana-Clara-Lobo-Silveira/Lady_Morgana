@@ -18,5 +18,6 @@ class Morgana:
         t = pg.key.get_pressed()
         if t [t_d] and self.p_x <= 1200-self.la:
             self.p_x += 7
+            
         elif t [t_e] and self.p_x >= 0:
             self.p_x -= 7

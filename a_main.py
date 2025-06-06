@@ -87,9 +87,11 @@ while jogo_ligado:
             elif pontuacao >= 5000:
                     pg.mixer.music.stop()
                     estado = "VICTORY"
-                    pg.mixer.music.load("som/grito_.mp3") #Trocando música de fundo.
+                    pg.mixer.music.load("som/risada_.mp3") #Trocando música de fundo.
                     pg.mixer.music.set_endevent(pg.USEREVENT)
                     pg.mixer.music.play()
+        
+
 
     if estado == "VICTORY":
          tela.blit(fundo_v,(0,0))
