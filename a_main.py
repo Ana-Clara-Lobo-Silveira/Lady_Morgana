@@ -15,7 +15,7 @@ pg.mixer.music.play(loops=-1)
 pg.display.set_caption("Lady Morgana") #Nome do jogo.
 
 estado = "CAPA" #Estado em que o jogo se encontra.
-morgana = Morgana("imagem/morgana__.png",120,208,550,550,"som/item.mp3.crdownload") #Definições do personagem jogável.
+morgana = Morgana("imagem/morgana__.png",120,208,550,550,"som/item_.mp3") #Definições do personagem jogável.
 fonte_placar = pg.font.SysFont("Castellar",27,False,False)
 
 fundo_v = pg.image.load("imagem/vitoria.png")
