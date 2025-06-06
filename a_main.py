@@ -16,9 +16,9 @@ fonte_placar = pg.font.SysFont("Matura MT Script Capitals",25,False,False)
 
 fundo_v = pg.image.load("imagem/vitoria.png")
 fundo_v = pg.transform.scale(fundo_v,(1200,820))
-fundo_i = pg.image.load("imagem/fundo_i.png")
+fundo_i = pg.image.load("imagem/tutorial.png")
 fundo_i = pg.transform.scale(fundo_i,(1200,820))
-fundo_c = pg.image.load("imagem/fundo_c.png")
+fundo_c = pg.image.load("imagem/capa.png")
 fundo_c = pg.transform.scale(fundo_c,(1200,820))
 fundo_d = pg.image.load("imagem/derrota.png")
 fundo_d = pg.transform.scale(fundo_d,(1200,820))
@@ -32,8 +32,7 @@ o = [Obstaculo("imagem/pocao_a.png",70,70,500), #Lista de obstáculos
      Obstaculo("imagem/grimorio.png",60,70,2),
      Obstaculo("imagem/pocao_m.png",70,70,-1000),
      Obstaculo("imagem/alho.png",70,70,2),
-     Obstaculo("imagem/agua.png",70,70,-50),
-     Obstaculo("Imagem/cruz.png",60,70, -50)]
+     Obstaculo("imagem/agua.png",70,70,-50)]
      
 
 #Se não colocar em loop a tela do jogo não permanece.
@@ -42,6 +41,8 @@ while jogo_ligado:
     for evento in pg.event.get():
         if evento.type == pg.QUIT:
             jogo_ligado = False
+    
+    
 
     if estado == "CAPA":
         tela.blit(fundo_c,(0,0))
@@ -74,7 +75,7 @@ while jogo_ligado:
                 ob.p_x = random.choice(ob.lista_pos)
                 if pontuacao <= -3000:
                     estado = "GAME OVER"
-            elif pontuacao == 5000:
+            elif pontuacao >= 5000:
                     estado = "VICTORY"
 
     if estado == "VICTORY":
