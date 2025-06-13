@@ -7,6 +7,7 @@ Lady Morgana é um jogo com a mecânica de **"Pega Item"**. Nele, diversos itens
 ### Como jogar?
 
 Ao iniciar o jogo e passar pela capa, você entrará automaticamente na tela de **"Tutorial"**, onde encontrará todas as instruções detalhadas para jogar.
+![Exemplo de tela do jogo](imagem/fundo_i.png)
 
 ### Como saber se venci ou perdi o jogo?
 
