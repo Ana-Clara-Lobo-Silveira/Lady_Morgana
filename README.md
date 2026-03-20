@@ -11,7 +11,8 @@ Ao iniciar o jogo e passar pela capa, você entrará automaticamente na tela de 
 
 ## Como saber se venci ou perdi o jogo?
 
-A tela de vitória ou derrota aparecerá automaticamente assim que a pontuação limite for atingida:
+A tela de vitória ou derrota aparecerá automaticamente assim que a pontuação limite for atingida. Ex:
+
 ![Exemplo de tela do jogo: vitoria](imagem/vitoria.png)
 ---
 ![Exemplo de tela do jogo: derrota](imagem/derrota.png)
